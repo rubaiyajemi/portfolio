@@ -157,19 +157,22 @@ ul { list-style: none; }
   font-family: var(--font-display);
 }
 .logo-mark {
-  width: 38px;
-  height: 38px;
-  background: var(--navy);
-  color: var(--cream);
-  display: grid;
-  place-items: center;
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
-  font-style: italic;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 2px solid var(--gold);
+  overflow: hidden;
+  display: inline-block;
   transition: transform 0.4s var(--ease);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(31, 56, 100, 0.15);
+}
+.logo-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 .nav-logo:hover .logo-mark { transform: rotate(360deg); }
 .logo-text {
@@ -1442,8 +1445,6 @@ ul { list-style: none; }
   gap: 16px;
 }
 .footer-brand .logo-mark {
-  background: var(--gold);
-  color: var(--navy-deep);
   border-color: var(--gold);
 }
 .footer-brand strong {
